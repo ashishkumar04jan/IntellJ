@@ -43,6 +43,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup Java
+        # You may pin to the exact commit or the version.
+        # uses: Fleshgrinder/setup-java@da5229ba146b252e0b14db4f3724f7f1f846bf66
+        uses: actions/setup-java@v3
+        with:
+          # Specifies a version to use instead of reading it from a file, useful in matrix builds.
+          java-version: 11
+          distribution: 'temurin'
+          # Specifies the name to the file where the version should be read from.
+          
       - name: Analyze with SonarCloud
 
         # You can pin the exact commit or the version.
